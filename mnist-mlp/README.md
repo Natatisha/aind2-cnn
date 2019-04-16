@@ -93,7 +93,24 @@ model.add(Dense(10, activation='softmax'))
      - Test accuracy: 0.3039
      - Observation: looks like something went really wrong. Loss was decreasing at first, but then it started increasing dramatically. So probably our data is skewed in a way that it's hard or even impossible for gradient descent to find global mininum. 
 
-- [ ] use different optimizer 
+- [X] use different optimizer 
+  - Changed `adam` to `sgd`: 
+     
+     <img src="acc_6_1.png" width="420px" height="280px">
+     <img src="loss_6_1.png" width="420px" height="280px">
+     
+     - Train accuracy: 0.9125
+     - Test accuracy: 0.9350
+     - Observation: Overfitting reduced but overall performance looks worse (loss function decrease is steady but too slow). Probably 10 epochs is not enough for this optimizer. 
+     
+   - Changed `adam` to `rms_prop`:
+     
+     <img src="acc_6_2.png" width="420px" height="280px">
+     <img src="loss_6_2.png" width="420px" height="280px">
+     
+     - Train accuracy: 0.9923
+     - Test accuracy: 0.9819
+     - Observation: good performance, but model still overfits
 
 - [ ] change batch size
 
