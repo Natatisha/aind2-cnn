@@ -56,8 +56,25 @@ model.add(Dense(10, activation='softmax'))
       - Test accuracy: 0.9817
       - Observation: overfitting was reduced, but it worked worse, than step 1.2
 
-- [ ] remove dropout layers 
-
+- [x] change dropout layers 
+  - removed all dropout layers: 
+    
+     <img src="acc_3_1.png" width="420px" height="280px">
+     <img src="loss_3_1.png" width="420px" height="280px">
+  
+    - Train accuracy: 0.9947
+    - Test accuracy: 0.9751
+    - Observation: model overfits heavily, we definitely need regularization
+   
+   - increased dropout to 0.4 in the first layer and to 0.3 in the second layer: 
+    
+     <img src="acc_3_2.png" width="420px" height="280px">
+     <img src="loss_3_2.png" width="420px" height="280px">
+     
+     - Train accuracy: 0.9850
+     - Test accuracy: 0.9829
+     - Observation: overfitting reduced, model performs better
+      
 - [ ] remove `relu` ativation functions from each layer 
 
 - [ ] remove pre-processing step with dividing by 255 
