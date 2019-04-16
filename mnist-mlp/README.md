@@ -112,5 +112,23 @@ model.add(Dense(10, activation='softmax'))
      - Test accuracy: 0.9819
      - Observation: good performance, but model still overfits
 
-- [ ] change batch size
-
+- [x] change batch size:
+  - increased from `128` to `256`:
+       
+     <img src="acc_7_1.png" width="420px" height="280px">
+     <img src="loss_7_1.png" width="420px" height="280px">
+  
+    - Training time 8-15 sec per epoch
+    - Train accuracy: 0.9915
+    - Test accuracy: 0.9817
+    
+  - decreased from `128` to `64` :
+  
+     <img src="acc_7_2.png" width="420px" height="280px">
+     <img src="loss_7_2.png" width="420px" height="280px">
+  
+    - Training time 18-27 sec per epoch
+    - Train accuracy: 0.9909
+    - Test accuracy: 0.9801
+    
+   - Observation: batch GD learns faster than stochastic (+ the one with bigger batch is faster than the other with smaller batch size), 256 batch size is OK for my computer, but it also could and should be tuned (because if it's too big -> OME).
