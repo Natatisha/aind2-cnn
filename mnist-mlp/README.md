@@ -75,9 +75,23 @@ model.add(Dense(10, activation='softmax'))
      - Test accuracy: 0.9829
      - Observation: overfitting reduced, model performs better
       
-- [ ] remove `relu` ativation functions from each layer 
+- [x] remove `relu` ativation functions from each layer 
+     
+     <img src="acc_4_1.png" width="420px" height="280px">
+     <img src="loss_4_1.png" width="420px" height="280px">
+     
+     - Train accuracy: 0.9114
+     - Test accuracy: 0.9198
+     - Observation: everything looks ok in train plots but test graph looks really unstable. We probably should add at least some activation function. 
 
-- [ ] remove pre-processing step with dividing by 255 
+- [x] remove pre-processing step with dividing by 255 
+          
+     <img src="acc_5_1.png" width="420px" height="280px">
+     <img src="loss_5_1.png" width="420px" height="280px">
+     
+     - Train accuracy: 0.1904
+     - Test accuracy: 0.3039
+     - Observation: looks like something went really wrong. Loss was decreasing at first, but then it started increasing dramatically. So probably our data is skewed in a way that it's hard or even impossible for gradient descent to find global mininum. 
 
 - [ ] use different optimizer 
 
