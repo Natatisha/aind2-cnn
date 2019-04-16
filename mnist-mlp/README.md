@@ -15,8 +15,9 @@ model.add(Dense(10, activation='softmax'))
 ## Tasks
 - [x] increase/decrease number of nodes in each hidden layer
   - increased num of nodes in each layer to `1024`: 
-    ![Loss function](loss_1_1.png)
-    ![Accuracy function](acc_1_1.png)
+  
+    <img src="acc_1_1.png" width="420px" height="280px">
+    <img src="loss_1_1.png" width="420px" height="280px">
     
     - Train accuracy: 0.9923
     - Test accuracy: 0.9798
