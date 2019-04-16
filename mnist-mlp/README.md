@@ -22,6 +22,15 @@ model.add(Dense(10, activation='softmax'))
     - Train accuracy: 0.9923
     - Test accuracy: 0.9798
     - Observation: seems like model memorized training data and tends to overfitting
+    
+  - decreased num of nodes in each layer to `256`: 
+    
+    <img src="acc_1_2.png" width="420px" height="280px">
+    <img src="loss_1_2.png" width="420px" height="280px">
+      
+     - Train accuracy: 0.9894
+     - Test accuracy: 0.9823
+     - Observation: model performs better than previous, overfitting reduced 
 
 - [ ] increase/decrease number of hidden layers
 
