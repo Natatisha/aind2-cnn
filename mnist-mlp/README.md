@@ -9,8 +9,13 @@ model.add(Dense(512, activation='relu'))
 model.add(Dropout(0.2))
 model.add(Dense(10, activation='softmax'))
 ```
-- Train accuracy: 0.9812
-- Test accuracy: 0.9796
+
+<img src="acc_0.png" width="420px" height="280px">
+<img src="loss_0.png" width="420px" height="280px">
+
+- Train accuracy: 0.9918
+- Test accuracy: 0.9799
+- Initial observation: model performs pretty good, but tends to overfitting
 
 ## Tasks
 - [x] increase/decrease number of nodes in each hidden layer
@@ -32,7 +37,16 @@ model.add(Dense(10, activation='softmax'))
      - Test accuracy: 0.9823
      - Observation: model performs better than previous, overfitting reduced 
 
-- [ ] increase/decrease number of hidden layers
+- [x] increase/decrease number of hidden layers
+  - added +1 more hidden layer of size `256` (activation `relu`, dropout `0.2`): 
+    
+    <img src="acc_2_1.png" width="420px" height="280px">
+    <img src="loss_2_1.png" width="420px" height="280px">
+    
+      - Train accuracy: 0.9890
+      - Test accuracy: 0.9766
+      
+  - reduced number of hidden layers so now our model has only one of size `512`:
 
 - [ ] remove dropout layers 
 
