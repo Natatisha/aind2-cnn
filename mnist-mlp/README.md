@@ -132,3 +132,18 @@ model.add(Dense(10, activation='softmax'))
     - Test accuracy: 0.9801
     
    - Observation: batch GD learns faster than stochastic (+ the one with bigger batch is faster than the other with smaller batch size), 256 batch size is OK for my computer, but it also could and should be tuned (because if it's too big -> OME).
+   
+## Final model 
+
+```
+model = Sequential()
+model.add(Flatten(input_shape=X_train.shape[1:]))
+model.add(Dense(512, activation='relu'))
+model.add(Dropout(0.4))
+model.add(Dense(246, activation='relu'))
+model.add(Dropout(0.3))
+model.add(Dense(10, activation='softmax'))
+```
+`batch_size=256`
+`epochs=10`
+`optimizer=adam`
