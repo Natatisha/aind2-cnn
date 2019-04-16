@@ -45,8 +45,16 @@ model.add(Dense(10, activation='softmax'))
     
       - Train accuracy: 0.9890
       - Test accuracy: 0.9766
+      - Observation: model definitely overfits even more
       
   - reduced number of hidden layers so now our model has only one of size `512`:
+  
+     <img src="acc_2_2.png" width="420px" height="280px">
+     <img src="loss_2_2.png" width="420px" height="280px">
+    
+      - Train accuracy: 0.9937
+      - Test accuracy: 0.9817
+      - Observation: overfitting was reduced, but it worked worse, than step 1.2
 
 - [ ] remove dropout layers 
 
